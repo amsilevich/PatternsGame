@@ -4,4 +4,4 @@ project(ProjectTP)
 set(CMAKE_CXX_STANDARD 14)
 include_directories(${CMAKE_SOURCE_DIR})
 
-add_executable(main main.cpp)
+add_executable(game main.cpp)
