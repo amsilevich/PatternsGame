@@ -34,10 +34,10 @@ public:
 
 class Healers: public AbstractUnits {
 private:
-    int heal = 10;
+    int heal = 5;
 public:
     Healers(int _count = 0) {
-        health = 30;
+        health = 10;
         maxHealth = 30;
         cost = 10;
         count = _count;

@@ -5,7 +5,7 @@
 
 class Game {
 private:
-    int coins = 300;
+    int coins = 180;
     Component* army = new Composite("Your Army");
     bool youWon = true;
     int lastLvl = 3;
@@ -28,6 +28,9 @@ public:
     void ArmyAttackMessage() {
         std::cout << "Army attacks!!" << std::endl;
     }
+    void ArmyHealMessage() {
+        std::cout << "Army gets heal from Healers!!" << std::endl;
+    }
     void fight() {
         army->write();
         monster->write();
@@ -48,6 +51,8 @@ public:
             youWon = false;
             return;
         }
+        ArmyHealMessage();
+        army->getHeal();
         ArmyAttackMessage();
         monster->getDamage(army);
         if (!monster->isAlive()) {

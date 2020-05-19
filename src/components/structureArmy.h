@@ -204,6 +204,7 @@ public:
 class Monster {
 private:
     int health = 300;
+    int maxHealth = 300;
     int damage = 100;
     int lvl = 1;
     int price = 150;
@@ -228,7 +229,8 @@ public:
     }
     void upgrade() {
         ++lvl;
-        health += 200;
+        maxHealth += 200;
+        health = maxHealth;
         damage += 100;
         price += 150;
     }
